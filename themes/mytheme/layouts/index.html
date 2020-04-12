@@ -2,7 +2,12 @@
 <h1>This is home page</h1>
 <ul>
 {{ range .Site.RegularPages }}
-    <li>This is the title - <a href="{{.URL}}">{{.Title}}</a></li>
+  <li>This is the title - <a href="{{.URL}}">{{.Title}}</a></li>
+{{end}}
+{{/*Below block is POC for search functionality*/}}
+<h2>With Search Enabled!</h2>
+{{ range .Site.RegularPages }}
+{{if in .Title "Second"}}<li>This is the title - <a href="{{.URL}}">{{.Title}}</a></li>{{end}}
 {{end}}
 </ul>
 {{end}}
