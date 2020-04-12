@@ -2,7 +2,7 @@
 <h1>This is home page</h1>
 <ul>
 {{ range .Site.RegularPages }}
-    <li>This is the title - {{.Title}}</li>
+    <li>This is the title - <a href="{{.URL}}">{{.Title}}</a></li>
 {{end}}
 </ul>
 {{end}}
