@@ -1,0 +1,8 @@
+{{define "main"}}
+<h1>This is home page</h1>
+<ul>
+{{ range .Site.RegularPages }}
+    <li>This is the title - {{.Title}}</li>
+{{end}}
+</ul>
+{{end}}
